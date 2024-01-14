@@ -85,7 +85,7 @@ export const updateUser = async (req: Request, res: Response) => {
     if (error instanceof Error) {
       if (
         error.message.includes(
-          "Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: Progetto_finale.Users index: username_1 dup key:"
+          "Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.Users index: username_1 dup key:"
         )
       ) {
         res.status(403).json({ error: error.message });
@@ -94,7 +94,7 @@ export const updateUser = async (req: Request, res: Response) => {
 
       if (
         error.message.includes(
-          "Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: Progetto_finale.Users index: email_1 dup key:"
+          "Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.Users index: email_1 dup key:"
         )
       ) {
         res.status(409).json({ error: error.message });

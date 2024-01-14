@@ -53,7 +53,7 @@ export const registerUser = async (req: Request, res: Response) => {
       // cover error of duplicate username
       if (
         error.message.includes(
-          "E11000 duplicate key error collection: Progetto_finale.Users index: username_1 dup key"
+          "E11000 duplicate key error collection: test.Users index: username_1 dup key"
         )
       ) {
         res.status(406).json({ error: error.message });
@@ -62,7 +62,7 @@ export const registerUser = async (req: Request, res: Response) => {
 
       if (
         error.message.includes(
-          "E11000 duplicate key error collection: Progetto_finale.Users index: email_1 dup key"
+          "E11000 duplicate key error collection: test.Users index: email_1 dup key"
         )
       ) {
         res.status(409).json({ error: error.message });
